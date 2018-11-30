@@ -79,13 +79,28 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="这里是老杨 OvO">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理前言见解有限，如有描述不当之处，请帮忙及时指出，如有错误，会及时修正。 ———-超长文+多图预警，需要花费不少时间。———- 如果看完本文后，还对进程线程傻傻分不清，不清楚浏览器多进程、浏览器内核多线程、JS单线程、JS运行机制的区别。那么请回复我，一定是我写的还不够清晰，我来改。。。 ———-正文开始———- 最近发现有不少介绍JS单线程运">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS运行机制">
+<meta property="og:url" content="http://yoursite.com/2018/11/30/JS运行机制/index.html">
 <meta property="og:site_name" content="这里是老杨 OvO">
+<meta property="og:description" content="从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理前言见解有限，如有描述不当之处，请帮忙及时指出，如有错误，会及时修正。 ———-超长文+多图预警，需要花费不少时间。———- 如果看完本文后，还对进程线程傻傻分不清，不清楚浏览器多进程、浏览器内核多线程、JS单线程、JS运行机制的区别。那么请回复我，一定是我写的还不够清晰，我来改。。。 ———-正文开始———- 最近发现有不少介绍JS单线程运">
 <meta property="og:locale" content="zh-Hans">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="这里是老杨 OvO">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/1/21/1611938b2d7c9377?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version=" 1.0"?=""><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="900" height="539">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version=" 1.0"?=""/><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="900" height="438">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version=" 1.0"?=""/><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="287" height="577">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version=" 1.0"?=""/><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="470" height="325">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version=" 1.0"?=""/><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="900" height="352">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version=" 1.0"?=""/><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="900" height="564">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version=" 1.0"?=""/><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="610" height="637">
+<meta property="og:image" content="data:image/svg+xml;utf8,<?xml version=" 1.0"?=""/><svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="636" height="518">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/1/21/1611938b96e93485?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"/>
+<meta property="og:updated_time" content="2018-11-30T08:02:32.078Z"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="JS运行机制"/>
+<meta name="twitter:description" content="从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理前言见解有限，如有描述不当之处，请帮忙及时指出，如有错误，会及时修正。 ———-超长文+多图预警，需要花费不少时间。———- 如果看完本文后，还对进程线程傻傻分不清，不清楚浏览器多进程、浏览器内核多线程、JS单线程、JS运行机制的区别。那么请回复我，一定是我写的还不够清晰，我来改。。。 ———-正文开始———- 最近发现有不少介绍JS单线程运"/>
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/1/21/1611938b2d7c9377?imageView2/0/w/1280/h/960/format/webp/ignore-error/1"/>
 
 
 
@@ -115,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2018/11/30/JS运行机制/"/>
 
 
 
 
 
-  <title>这里是老杨 OvO</title>
+  <title>JS运行机制 | 这里是老杨 OvO</title>
   
 
 
@@ -131,7 +146,7 @@
 
 
 
-</head>
+</svg></svg></svg></svg></svg></svg></svg></svg></head>
 
 <body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
 
@@ -140,8 +155,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -254,9 +268,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -286,9 +300,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/11/30/JS运行机制/" itemprop="url">JS运行机制</a></h1>
+          <h1 class="post-title" itemprop="name headline">JS运行机制</h1>
         
 
         <div class="post-meta">
@@ -338,9 +350,7 @@
       
 
       
-        
-          
-            <h1 id="从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理"><a href="#从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理" class="headerlink" title="从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理"></a>从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>见解有限，如有描述不当之处，请帮忙及时指出，如有错误，会及时修正。</strong></p>
+        <h1 id="从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理"><a href="#从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理" class="headerlink" title="从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理"></a>从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p><strong>见解有限，如有描述不当之处，请帮忙及时指出，如有错误，会及时修正。</strong></p>
 <p><strong>———-超长文+多图预警，需要花费不少时间。———-</strong></p>
 <p><em>如果看完本文后，还对进程线程傻傻分不清，不清楚浏览器多进程、浏览器内核多线程、JS单线程、JS运行机制的区别。那么请回复我，一定是我写的还不够清晰，我来改。。。</em></p>
 <p><strong>———-正文开始———-</strong></p>
@@ -701,8 +711,6 @@
 <p>MessageChannel属于宏任务，优先级是：<code>MessageChannel-&gt;setTimeout</code>， 所以Vue（2.5+）内部的nextTick与2.4及之前的实现是不一样的，需要注意下。</p>
 <p>这里不展开，可以看下<a href="https://link.juejin.im/?target=https%3A%2F%2Fjuejin.im%2Fpost%2F5a1af88f5188254a701ec230" target="_blank" rel="noopener">juejin.im/post/5a1af8…</a></p>
 
-          
-        
       
     </div>
     
@@ -719,12 +727,12 @@
       
 
       
+      
+      
 
       
 
       
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -734,10 +742,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -745,6 +754,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -765,8 +778,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -808,6 +830,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理"><span class="nav-number">1.</span> <span class="nav-text">从浏览器多进程到JS单线程，JS运行机制最全面的一次梳理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大纲"><span class="nav-number">1.2.</span> <span class="nav-text">大纲</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#区分进程和线程"><span class="nav-number">1.3.</span> <span class="nav-text">区分进程和线程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#浏览器是多进程的"><span class="nav-number">1.4.</span> <span class="nav-text">浏览器是多进程的</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器都包含哪些进程？"><span class="nav-number">1.4.1.</span> <span class="nav-text">浏览器都包含哪些进程？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#浏览器多进程的优势"><span class="nav-number">1.4.2.</span> <span class="nav-text">浏览器多进程的优势</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重点是浏览器内核（渲染进程）"><span class="nav-number">1.4.3.</span> <span class="nav-text">重点是浏览器内核（渲染进程）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Browser进程和浏览器内核（Renderer进程）的通信过程"><span class="nav-number">1.4.4.</span> <span class="nav-text">Browser进程和浏览器内核（Renderer进程）的通信过程</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梳理浏览器内核中线程之间的关系"><span class="nav-number">1.5.</span> <span class="nav-text">梳理浏览器内核中线程之间的关系</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GUI渲染线程与JS引擎线程互斥"><span class="nav-number">1.5.1.</span> <span class="nav-text">GUI渲染线程与JS引擎线程互斥</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS阻塞页面加载"><span class="nav-number">1.5.2.</span> <span class="nav-text">JS阻塞页面加载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebWorker，JS的多线程？"><span class="nav-number">1.5.3.</span> <span class="nav-text">WebWorker，JS的多线程？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WebWorker与SharedWorker"><span class="nav-number">1.5.4.</span> <span class="nav-text">WebWorker与SharedWorker</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单梳理下浏览器渲染流程"><span class="nav-number">1.6.</span> <span class="nav-text">简单梳理下浏览器渲染流程</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#load事件与DOMContentLoaded事件的先后"><span class="nav-number">1.6.1.</span> <span class="nav-text">load事件与DOMContentLoaded事件的先后</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css加载是否会阻塞dom树渲染？"><span class="nav-number">1.6.2.</span> <span class="nav-text">css加载是否会阻塞dom树渲染？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#普通图层和复合图层"><span class="nav-number">1.6.3.</span> <span class="nav-text">普通图层和复合图层</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从Event-Loop谈JS的运行机制"><span class="nav-number">1.7.</span> <span class="nav-text">从Event Loop谈JS的运行机制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事件循环机制进一步补充"><span class="nav-number">1.7.1.</span> <span class="nav-text">事件循环机制进一步补充</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单独说说定时器"><span class="nav-number">1.7.2.</span> <span class="nav-text">单独说说定时器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#setTimeout而不是setInterval"><span class="nav-number">1.7.3.</span> <span class="nav-text">setTimeout而不是setInterval</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事件循环进阶：macrotask与microtask"><span class="nav-number">1.8.</span> <span class="nav-text">事件循环进阶：macrotask与microtask</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -948,6 +986,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
