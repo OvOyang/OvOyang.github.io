@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,">
+  <meta name="keywords" content="VUE,">
 
 
 
@@ -79,24 +79,18 @@
 
 
 
-<meta name="description" content="首先贴出官网代码官网地址配置：https://www.npmjs.com/package/hexo-helper-live2d 按如下步骤执行1️⃣ 首先检查博客主目录下面的 package.json里是否有&amp;quot;hexo-helper-live2d&amp;quot;: &amp;quot;^3.0.3&amp;quot;,依赖，有的话可以先卸载使用命令：npm uninstall hexo-helper-liv">
-<meta name="keywords" content="Hexo">
+<meta name="description" content="单页面应用 第一次进入页面时会请求一个html文件，刷新清除一下，切换到其他组件，此时路径也相应变化，但是并没有新的html文件请求，页面内容却变化了。  原理： js会感知到url的变化，通过这一点可以用js动态地将当前页面的内容清除，然后将下一个页面的内容挂载到当前页面上。这个时候的路由不再是后端来做了，而是前端来做，判断页面显示相应的组件，清除不需要的。 页面跳转：  js渲染 优点： 页面">
+<meta name="keywords" content="VUE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo添加Live2d看板模型">
-<meta property="og:url" content="http://yoursite.com/2017/12/30/Hexo添加live2d看板模型/index.html">
+<meta property="og:title" content="spa单页面与mpa多页面">
+<meta property="og:url" content="http://yoursite.com/2018/06/17/spa与mpa/index.html">
 <meta property="og:site_name" content="这里是老杨 OvO">
-<meta property="og:description" content="首先贴出官网代码官网地址配置：https://www.npmjs.com/package/hexo-helper-live2d 按如下步骤执行1️⃣ 首先检查博客主目录下面的 package.json里是否有&amp;quot;hexo-helper-live2d&amp;quot;: &amp;quot;^3.0.3&amp;quot;,依赖，有的话可以先卸载使用命令：npm uninstall hexo-helper-liv">
+<meta property="og:description" content="单页面应用 第一次进入页面时会请求一个html文件，刷新清除一下，切换到其他组件，此时路径也相应变化，但是并没有新的html文件请求，页面内容却变化了。  原理： js会感知到url的变化，通过这一点可以用js动态地将当前页面的内容清除，然后将下一个页面的内容挂载到当前页面上。这个时候的路由不再是后端来做了，而是前端来做，判断页面显示相应的组件，清除不需要的。 页面跳转：  js渲染 优点： 页面">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5841000-e2664ebfd731a8d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/630/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5841000-02a497abe20b74de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/607/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5841000-9ba59c23a3e93f97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/699/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5841000-e55231f39459c4ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp">
-<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/5841000-af7c4a71f5345b9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/894/format/webp">
-<meta property="og:updated_time" content="2019-02-24T04:40:05.821Z">
+<meta property="og:updated_time" content="2019-02-24T05:52:40.502Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo添加Live2d看板模型">
-<meta name="twitter:description" content="首先贴出官网代码官网地址配置：https://www.npmjs.com/package/hexo-helper-live2d 按如下步骤执行1️⃣ 首先检查博客主目录下面的 package.json里是否有&amp;quot;hexo-helper-live2d&amp;quot;: &amp;quot;^3.0.3&amp;quot;,依赖，有的话可以先卸载使用命令：npm uninstall hexo-helper-liv">
-<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/5841000-e2664ebfd731a8d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/630/format/webp">
+<meta name="twitter:title" content="spa单页面与mpa多页面">
+<meta name="twitter:description" content="单页面应用 第一次进入页面时会请求一个html文件，刷新清除一下，切换到其他组件，此时路径也相应变化，但是并没有新的html文件请求，页面内容却变化了。  原理： js会感知到url的变化，通过这一点可以用js动态地将当前页面的内容清除，然后将下一个页面的内容挂载到当前页面上。这个时候的路由不再是后端来做了，而是前端来做，判断页面显示相应的组件，清除不需要的。 页面跳转：  js渲染 优点： 页面">
 
 
 
@@ -126,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/12/30/Hexo添加live2d看板模型/">
+  <link rel="canonical" href="http://yoursite.com/2018/06/17/spa与mpa/">
 
 
 
 
 
-  <title>Hexo添加Live2d看板模型 | 这里是老杨 OvO</title>
+  <title>spa单页面与mpa多页面 | 这里是老杨 OvO</title>
   
 
 
@@ -249,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/30/Hexo添加live2d看板模型/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/17/spa与mpa/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="老杨">
@@ -266,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo添加Live2d看板模型</h1>
+          <h1 class="post-title" itemprop="name headline">spa单页面与mpa多页面</h1>
         
 
         <div class="post-meta">
@@ -278,8 +272,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-30T09:28:56+08:00">
-                2017-12-30
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-17T20:04:10+08:00">
+                2018-06-17
               </time>
             
 
@@ -316,33 +310,24 @@
       
 
       
-        <h1 id="首先贴出官网代码"><a href="#首先贴出官网代码" class="headerlink" title="首先贴出官网代码"></a>首先贴出官网代码</h1><p>官网地址配置：<a href="https://www.npmjs.com/package/hexo-helper-live2d" target="_blank" rel="noopener">https://www.npmjs.com/package/hexo-helper-live2d</a></p>
-<h1 id="按如下步骤执行"><a href="#按如下步骤执行" class="headerlink" title="按如下步骤执行"></a>按如下步骤执行</h1><p>1️⃣ 首先检查博客主目录下面的 <code>package.json</code>里是否有<br><code>&quot;hexo-helper-live2d&quot;: &quot;^3.0.3&quot;,</code>依赖，有的话可以先卸载<br>使用命令：<code>npm uninstall hexo-helper-live2d</code><br>之后再安装：<code>npm install --save hexo-helper-live2d</code><br><strong>注意：</strong>命令都是在你的博客主目录执行<br><a id="more"></a></p>
-<p><a href="https://upload-images.jianshu.io/upload_images/5841000-e2664ebfd731a8d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/630/format/webp" target="_blank" rel="noopener"><img src="https://upload-images.jianshu.io/upload_images/5841000-e2664ebfd731a8d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/630/format/webp" alt="img"></a></p>
-<p>我的博客目录结构：d:/github/blog</p>
-<p>安装完成之后在</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">package.json</span><br></pre></td></tr></table></figure>
-<p>会看到安装的model</p>
-<p><a href="https://upload-images.jianshu.io/upload_images/5841000-02a497abe20b74de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/607/format/webp" target="_blank" rel="noopener"><img src="https://upload-images.jianshu.io/upload_images/5841000-02a497abe20b74de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/607/format/webp" alt="img"></a></p>
-<p>package.json依赖</p>
-<p>此时再去</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">node_moduels</span><br></pre></td></tr></table></figure>
-<p>目录下，可以看到有如下文件夹，这些都是动画主配置</p>
-<p><a href="https://upload-images.jianshu.io/upload_images/5841000-9ba59c23a3e93f97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/699/format/webp" target="_blank" rel="noopener"><img src="https://upload-images.jianshu.io/upload_images/5841000-9ba59c23a3e93f97.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/699/format/webp" alt="img"></a></p>
-<p>node_modules目录</p>
-<p>2️⃣下载各种动画model：</p>
-<p>地址：</p>
-<p><a href="https://github.com/xiazeyu/live2d-widget-models.git" target="_blank" rel="noopener">https://github.com/xiazeyu/live2d-widget-models.git</a></p>
-<p>3️⃣下载好之后将packages里的所有动画模板拷贝到博客的node_modules目录里</p>
-<p><a href="https://upload-images.jianshu.io/upload_images/5841000-e55231f39459c4ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" target="_blank" rel="noopener"><img src="https://upload-images.jianshu.io/upload_images/5841000-e55231f39459c4ce.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1000/format/webp" alt="img"></a></p>
-<p>packages目录</p>
-<p>4️⃣配置博客站点配置文件，_config.yml</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">live2d:</span><br><span class="line">  enable: true</span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-epsilon2_1  #模板目录，在node_modules里</span><br><span class="line">  display:</span><br><span class="line">    position: right</span><br><span class="line">    width: 150 </span><br><span class="line">    height: 300</span><br><span class="line">  mobile:</span><br><span class="line">    show: false  #是否在手机进行显示</span><br></pre></td></tr></table></figure>
-<p>5️⃣开始部署<br>当使用<code>hexo clean</code>或者 <code>hexo g</code>命令的时候，这时候就可以看到如下日志了</p>
-<p><a href="https://upload-images.jianshu.io/upload_images/5841000-af7c4a71f5345b9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/894/format/webp" target="_blank" rel="noopener"><img src="https://upload-images.jianshu.io/upload_images/5841000-af7c4a71f5345b9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/894/format/webp" alt="img"></a></p>
-<p>构建日志</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO HEXO-HELPER-LIVE2D: Loaded model from npm-module(1), live2d-widget-model-epsilon2_1@1.0.5 from &apos;D:\github\blog\node_modules\live2d-widget-model-epsilon2_1\assets&apos;</span><br></pre></td></tr></table></figure>
-<p>说明已经加载到了配置的动画模板，到此就完成了。</p>
+        <h3 id="单页面应用"><a href="#单页面应用" class="headerlink" title="单页面应用"></a>单页面应用</h3><blockquote>
+<p>第一次进入页面时会请求一个<code>html</code>文件，刷新清除一下，切换到其他组件，此时路径也相应变化，但是并没有新的<code>html</code>文件请求，页面内容却变化了。</p>
+</blockquote>
+<p><strong>原理：</strong> <code>js</code>会感知到<code>url</code>的变化，通过这一点可以用<code>js</code>动态地将当前页面的内容清除，然后将下一个页面的内容挂载到当前页面上。这个时候的路由不再是后端来做了，而是前端来做，判断页面显示相应的组件，清除不需要的。</p>
+<p><strong>页面跳转：</strong>  js渲染<br> <strong>优点：</strong> 页面切换快<br> <strong>缺点：</strong> 首屏时间稍慢，SEO差</p>
+ <a id="more"></a>
+<h5 id="1-为什么页面切换快？"><a href="#1-为什么页面切换快？" class="headerlink" title="1. 为什么页面切换快？"></a>1. 为什么页面切换快？</h5><p>页面每次切换跳转时，并不需要处理<code>html</code>文件的请求，这样就节约了很多<code>HTTP</code>发送时延，所以我们在切换页面的时候速度很快。</p>
+<h5 id="2-为什么首屏时间慢，SEO-差？"><a href="#2-为什么首屏时间慢，SEO-差？" class="headerlink" title="2. 为什么首屏时间慢，SEO 差？"></a>2. 为什么首屏时间慢，SEO 差？</h5><p>单页应用的首屏时间慢，首屏时需要请求一次<code>html</code>，同时还要发送一次<code>js</code>请求，两次请求回来了，首屏才会展示出来。相对于多页面应用，首屏时间慢。</p>
+<p>SEO效果差，因为搜索引擎只认识<code>html</code>里的内容，不认识<code>js</code>渲染生成的内容，搜索引擎不识别，也就不会给一个好排名，会导致单页应用做出来的网页在搜索引擎上的排名差。</p>
+<h5 id="3-为什么还要用-Vue-呢？"><a href="#3-为什么还要用-Vue-呢？" class="headerlink" title="3. 为什么还要用 Vue 呢？"></a>3. 为什么还要用 Vue 呢？</h5><p><code>Vue</code>官方提供了一些其他的技术来解决这些缺点，比如服务端渲染技术（<a href="https://cn.vuejs.org/v2/guide/ssr.html" target="_blank" rel="noopener">SSR</a>），通过这些技术可以完美解决这些缺点，这样一来单页面应用对于前端来说就是非常完美的页面开发解决方案了。</p>
+<hr>
+<h3 id="多页面应用"><a href="#多页面应用" class="headerlink" title="多页面应用"></a>多页面应用</h3><blockquote>
+<p>每一次页面跳转的时候，后台服务器都会返回一个新的<code>html</code>文档，这种类型的网站也就是多页网站，也叫多页应用。</p>
+</blockquote>
+<p><strong>页面跳转：</strong>  返回HTML<br> <strong>优点：</strong> 首屏时间快，SEO效果好<br> <strong>缺点：</strong> 页面切换慢</p>
+<h5 id="1-为什么多页应用的首屏时间快？"><a href="#1-为什么多页应用的首屏时间快？" class="headerlink" title="1. 为什么多页应用的首屏时间快？"></a>1. 为什么多页应用的首屏时间快？</h5><p>首屏时间叫做页面首个屏幕的内容展现的时间，当我们访问页面的时候，服务器返回一个<code>html</code>，页面就会展示出来，这个过程只经历了一个<code>HTTP</code>请求，所以页面展示的速度非常快。</p>
+<h5 id="2-为什么搜索引擎优化效果好（SEO）？"><a href="#2-为什么搜索引擎优化效果好（SEO）？" class="headerlink" title="2. 为什么搜索引擎优化效果好（SEO）？"></a>2. 为什么搜索引擎优化效果好（SEO）？</h5><p>搜索引擎在做网页排名的时候，要根据网页的内容才能给网页权重，来进行网页的排名。搜索引擎是可以识别<code>html</code>内容的，而我们每个页面所有的内容都放在<code>html</code>中，所以这种多页应用SEO排名效果好。</p>
+<h5 id="3-缺点：切换慢"><a href="#3-缺点：切换慢" class="headerlink" title="3. 缺点：切换慢"></a>3. 缺点：切换慢</h5><p>每次跳转都需要发送一个<code>HTTP</code>请求，如果网络状态不好，在页面间来回跳转时，就会发生明显的卡顿，影响用户体验。</p>
 
       
     </div>
@@ -360,7 +345,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/VUE/" rel="tag"># VUE</a>
           
         </div>
       
@@ -373,14 +358,18 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/06/03/Vue的跨域知识/" rel="next" title="VUE的跨域知识">
+                <i class="fa fa-chevron-left"></i> VUE的跨域知识
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/08/Hexo添加侧边栏音乐/" rel="prev" title="Hexo添加侧边栏音乐">
-                Hexo添加侧边栏音乐 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/10/11/微信小程序总结/" rel="prev" title="微信小程序基础总结">
+                微信小程序基础总结 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -519,7 +508,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#首先贴出官网代码"><span class="nav-number">1.</span> <span class="nav-text">首先贴出官网代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#按如下步骤执行"><span class="nav-number">2.</span> <span class="nav-text">按如下步骤执行</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#单页面应用"><span class="nav-number">1.</span> <span class="nav-text">单页面应用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-为什么页面切换快？"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 为什么页面切换快？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-为什么首屏时间慢，SEO-差？"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 为什么首屏时间慢，SEO 差？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-为什么还要用-Vue-呢？"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. 为什么还要用 Vue 呢？</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#多页面应用"><span class="nav-number">2.</span> <span class="nav-text">多页面应用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-为什么多页应用的首屏时间快？"><span class="nav-number">2.0.1.</span> <span class="nav-text">1. 为什么多页应用的首屏时间快？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-为什么搜索引擎优化效果好（SEO）？"><span class="nav-number">2.0.2.</span> <span class="nav-text">2. 为什么搜索引擎优化效果好（SEO）？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-缺点：切换慢"><span class="nav-number">2.0.3.</span> <span class="nav-text">3. 缺点：切换慢</span></a></li></ol></li></div>
             
 
           </div>
