@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo,">
+  <meta name="keywords" content="VUE,">
 
 
 
@@ -79,18 +79,29 @@
 
 
 
-<meta name="description" content="添加网易云音乐我们可以直接在网易云音乐中搜索我们想要插入的音乐，然后点击生成外链播放器 然后可以根据你得设置生成相应的html代码，将获得的html代码插入到你想要插入的位置即可 放在了layout/_macro/sidebar.swig 文件下   1234&amp;lt;div id=&amp;quot;music163player&amp;quot;&amp;gt;    &amp;lt;iframe frameborder=&amp;q">
-<meta name="keywords" content="Hexo">
+<meta name="description" content="一，什么是Vuex？   **vuex是一个专为vue.js应用程序开发的状态管理模式。**vuex解决了组件之间同一状态的共享问题。当我们的应用遇到多个组件之间的共享问题时会需要：   多个组件依赖于同一状态。传参的方法对于多层嵌套的组件将会变得很繁琐，并且对于兄弟组件间的传递无能为力。这需要你去学习下，vue的编码中多个组件之间的通讯的做法。来自不同组件的行为需要变更同一状态。我们经常会采用父">
+<meta name="keywords" content="VUE">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo添加侧边栏音乐">
-<meta property="og:url" content="http://yoursite.com/2018/01/08/Hexo添加侧边栏音乐/index.html">
+<meta property="og:title" content="Vuex的使用">
+<meta property="og:url" content="http://yoursite.com/2018/05/30/Vuex的使用/index.html">
 <meta property="og:site_name" content="这里是老杨 OvO">
-<meta property="og:description" content="添加网易云音乐我们可以直接在网易云音乐中搜索我们想要插入的音乐，然后点击生成外链播放器 然后可以根据你得设置生成相应的html代码，将获得的html代码插入到你想要插入的位置即可 放在了layout/_macro/sidebar.swig 文件下   1234&amp;lt;div id=&amp;quot;music163player&amp;quot;&amp;gt;    &amp;lt;iframe frameborder=&amp;q">
+<meta property="og:description" content="一，什么是Vuex？   **vuex是一个专为vue.js应用程序开发的状态管理模式。**vuex解决了组件之间同一状态的共享问题。当我们的应用遇到多个组件之间的共享问题时会需要：   多个组件依赖于同一状态。传参的方法对于多层嵌套的组件将会变得很繁琐，并且对于兄弟组件间的传递无能为力。这需要你去学习下，vue的编码中多个组件之间的通讯的做法。来自不同组件的行为需要变更同一状态。我们经常会采用父">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-02-24T04:45:22.479Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11969846-a853055c90c16a5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/259/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11969846-6558c69d69dba337.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/362/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11969846-8a87f8add7df87b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/409/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11969846-cc8c5fadfbe424e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/631/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11969846-ff928c923a85c208.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/476/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11969846-c74052ed8e1d9bd8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/419/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11969846-d78d94c95e68505d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/826/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11969846-2600017fc0f71594.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/519/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11969846-69d0e9ed4ee044b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/262/format/webp">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/11969846-ac6bde4066e7ba50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/538/format/webp">
+<meta property="og:updated_time" content="2019-02-24T05:23:45.725Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo添加侧边栏音乐">
-<meta name="twitter:description" content="添加网易云音乐我们可以直接在网易云音乐中搜索我们想要插入的音乐，然后点击生成外链播放器 然后可以根据你得设置生成相应的html代码，将获得的html代码插入到你想要插入的位置即可 放在了layout/_macro/sidebar.swig 文件下   1234&amp;lt;div id=&amp;quot;music163player&amp;quot;&amp;gt;    &amp;lt;iframe frameborder=&amp;q">
+<meta name="twitter:title" content="Vuex的使用">
+<meta name="twitter:description" content="一，什么是Vuex？   **vuex是一个专为vue.js应用程序开发的状态管理模式。**vuex解决了组件之间同一状态的共享问题。当我们的应用遇到多个组件之间的共享问题时会需要：   多个组件依赖于同一状态。传参的方法对于多层嵌套的组件将会变得很繁琐，并且对于兄弟组件间的传递无能为力。这需要你去学习下，vue的编码中多个组件之间的通讯的做法。来自不同组件的行为需要变更同一状态。我们经常会采用父">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/11969846-a853055c90c16a5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/259/format/webp">
 
 
 
@@ -120,13 +131,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/08/Hexo添加侧边栏音乐/">
+  <link rel="canonical" href="http://yoursite.com/2018/05/30/Vuex的使用/">
 
 
 
 
 
-  <title>Hexo添加侧边栏音乐 | 这里是老杨 OvO</title>
+  <title>Vuex的使用 | 这里是老杨 OvO</title>
   
 
 
@@ -243,7 +254,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/08/Hexo添加侧边栏音乐/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/30/Vuex的使用/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="老杨">
@@ -260,7 +271,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo添加侧边栏音乐</h1>
+          <h1 class="post-title" itemprop="name headline">Vuex的使用</h1>
         
 
         <div class="post-meta">
@@ -272,8 +283,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-08T16:08:22+08:00">
-                2018-01-08
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-30T21:14:20+08:00">
+                2018-05-30
               </time>
             
 
@@ -310,13 +321,72 @@
       
 
       
-        <h1 id="添加网易云音乐"><a href="#添加网易云音乐" class="headerlink" title="添加网易云音乐"></a>添加网易云音乐</h1><p>我们可以直接在网易云音乐中搜索我们想要插入的音乐，然后点击生成外链播放器</p>
-<p>然后可以根据你得设置生成相应的html代码，将获得的html代码插入到你想要插入的位置即可</p>
-<p>放在了<code>layout/_macro/sidebar.swig</code> 文件下</p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="86" src="https://music.163.com/outchain/player?type=2&amp;id=38358214&amp;auto=0&amp;height=66" style="width: 650px; height: 86px; position: absolute; top: 0px; left: 0px;"></iframe>
+        <p><strong>一，什么是Vuex？</strong></p>
+<pre><code>  **vuex是一个专为vue.js应用程序开发的状态管理模式。**vuex解决了组件之间同一状态的共享问题。当我们的应用遇到多个组件之间的共享问题时会需要：
 
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=&quot;music163player&quot;&gt;</span><br><span class="line">    &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=280 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=38358214&amp;auto=0&amp;height=66&quot;&gt;</span><br><span class="line">    &lt;/iframe&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>然后就可以在侧边栏看见我的播放器了~</p>
+ 多个组件依赖于同一状态。传参的方法对于多层嵌套的组件将会变得很繁琐，并且对于兄弟组件间的传递无能为力。这需要你去学习下，vue的编码中多个组件之间的通讯的做法。来自不同组件的行为需要变更同一状态。我们经常会采用父子组件直接引用或者通过事件来变更和同步状态的多份拷贝。以上的这些模式都很脆弱，通常会导致无法维护代码。所以，这时就出现了Vuex，这是Vuex出现的背景。Vuex官网上这样描述：Vuex是一个专为Vue.js应用程序开发的状态管理模式。
+
+他采用集中式存储管理应用的所有组件的状态。这里的关键在于集中式存储管理。这意味着本来需要共享状态的更新是需要组件之间的通讯，而现在有了vuex，组件就都和store通讯了。这也是为什么官网再次会提到Vuex构建大型应用的价值，如果你不打算开大大型的单页应用，使用Vuex可能会变得很繁琐，对于大型项目，可以使用Vuex作为不同组件之间的状态管理，而对于小型的项目，推荐使用HTML5特有的属性，localStroage和sessionStroage作为数据之间的传递。
+</code></pre><p>上面的深入的理解可以给你对Vuex有一个简单的认识，但是Vuex的具体作用是什么呢？通俗的讲：</p>
+<p><strong>Vuex是一个状态管理的插件，可以解决不同组件之间的数据共享和数据持久化。</strong></p>
+<a id="more"></a>
+<p><strong>二，Vuex的使用</strong></p>
+<p>在vue-cli以安装Vuex的情况下，直接引用。</p>
+<p>没有的话的步骤：</p>
+<p>1，安装Vuex，npm install vuex  –save 或    cnpm install   vuex  –save进行安装</p>
+<p>2，在src下新建一个名为vuex的文件夹</p>
+<p>3，vuex文件夹里面新建一个store.js</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/11969846-a853055c90c16a5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/259/format/webp" alt="img"></p>
+<p>4,在刚刚创建的store.js引入vue  引入vuex并且使用use Vuex</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/11969846-6558c69d69dba337.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/362/format/webp" alt="img"></p>
+<p>5，定义数据</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/11969846-8a87f8add7df87b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/409/format/webp" alt="img"></p>
+<p>6，定义方法</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/11969846-cc8c5fadfbe424e5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/631/format/webp" alt="img"></p>
+<p>7，实例化 Vuex.store</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/11969846-ff928c923a85c208.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/476/format/webp" alt="img"></p>
+<p>8，暴露</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/11969846-c74052ed8e1d9bd8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/419/format/webp" alt="img"></p>
+<p>完整代码如下：</p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/11969846-d78d94c95e68505d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/826/format/webp" alt="img"></p>
+<p><strong>三，组件里如何使用vuex？</strong></p>
+<p>1，引入store</p>
+<pre><code>import   store  from  “../vuex/store.js”
+</code></pre><p>2,注册</p>
+<pre><code>     export default{
+
+         data(){
+
+             return {             
+
+                msg:&apos;我是一个home组件&apos;,
+
+value1: null,
+
+             }
+
+         },
+
+         store,
+
+         methods:{
+
+             incCount(){
+
+                          this.$store.commit(&apos;incCount&apos;);   /*触发 state里面的数据*/
+
+             }
+
+         }
+
+      }
+</code></pre><p>3，获取state里面的数据</p>
+<pre><code>this.$store.state数据
+</code></pre><p>4、触发 mutations 改变 state里面的数据</p>
+<pre><code>this.$store.commit(&apos;incCount&apos;);
+</code></pre><p><img src="https:////upload-images.jianshu.io/upload_images/11969846-2600017fc0f71594.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/519/format/webp" alt="img"></p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/11969846-69d0e9ed4ee044b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/262/format/webp" alt="img"></p>
+<p><img src="https:////upload-images.jianshu.io/upload_images/11969846-ac6bde4066e7ba50.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/538/format/webp" alt="img"></p>
 
       
     </div>
@@ -334,7 +404,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/VUE/" rel="tag"># VUE</a>
           
         </div>
       
@@ -347,8 +417,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/12/30/Hexo添加live2d看板模型/" rel="next" title="Hexo添加Live2d看板模型">
-                <i class="fa fa-chevron-left"></i> Hexo添加Live2d看板模型
+              <a href="/2018/04/17/几种css手机端适配布局/" rel="next" title="几种css手机端适配布局">
+                <i class="fa fa-chevron-left"></i> 几种css手机端适配布局
               </a>
             
           </div>
@@ -356,10 +426,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/02/16/Node.js的基本使用/" rel="prev" title="Node.js的基本使用">
-                Node.js的基本使用 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -411,17 +477,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -487,22 +544,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#添加网易云音乐"><span class="nav-number">1.</span> <span class="nav-text">添加网易云音乐</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
